@@ -1,0 +1,9 @@
+The  main problem that comes with changing resolutions is the styled elements on the webpage
+might not fit well within a smaller window like a phone. Furthermore, certain elements cannot
+be displayed aesthetically while remaining functional. This calls for the webpage to be responsive
+to the view window, adjusting its content according to the user's condition.
+
+Main fixes that can be done:
+1. Change the CSS of certain HTML DOM placements and size to be relative to the view window
+2. Alter the navigation bar, appointing a minimum width where it changes to a hamburger menu to keep accessibility
+3. Hiding certain contents that might clutter the phone webpage.

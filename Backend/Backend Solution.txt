@@ -1,0 +1,46 @@
+#Backend Solution
+To think up of a solution, we should consider the components that goes into this.
+From the problem brief, each USER should be able to look at a MENU to order food.
+Then, they can track their ORDER, and the order's receipt must be availble to view for 1 year.
+
+Components
+1. user
+2. menu
+    2.1 foods on the menu
+3. receipt -> contains food
+           -> relate to user
+
+API functions:
+    Allow the user to create accounts, storing their name and id in the database.
+    The user can then call for items on the menu and choose. Users can then create 
+    user specific orders, that is then stored on two endpoints. The order starts with state "delivering".
+    In this case, they are also stored as a trackable order from their user id. 
+    If the food is delivered, it is deleted and solely stored on another endpoint.
+
+API endpoints:
+
+POST /users
+    create user during registration
+
+GET /users/{id}
+    get user info
+
+POST /users/{id}/orders
+    create an order from the user
+
+GET /users/{id}/track
+    get orders that can be tracked
+
+GET /users/{id}/orders
+    get all orders from user, might manage to delete them after a year.
+
+POST /menu
+    add to the menu
+
+GET /menu
+    get items on the menu
+
+
+
+
+
